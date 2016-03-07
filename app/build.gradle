@@ -4,10 +4,17 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     dataBinding {
         enabled = true
     }
-
+//    hugo {
+//        enabled true
+//    }
     defaultConfig {
         applicationId "com.drprog.moodstory"
         minSdkVersion 15
@@ -26,16 +33,20 @@ android {
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
         maven {
             url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
         }
     }
     dependencies {
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
         classpath "io.realm:realm-gradle-plugin:0.88.0-SNAPSHOT"
+        classpath 'me.tatarka:gradle-retrolambda:3.3.0-beta4'
     }
 }
 
 repositories {
+    mavenCentral()
     maven {
         url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
     }
@@ -63,4 +74,8 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.1'
 }
 
+
+
+apply plugin: 'com.jakewharton.hugo'
 apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
