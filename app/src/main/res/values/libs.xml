@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="binded" type="id"/>
+    <item name="binded1" type="id"/>
+
+    <color name="imageBorderColorDefault">#9B9B9B</color>
+
+    <dimen name="loading_list_divider_size_default">4dp</dimen>
+</resources>
