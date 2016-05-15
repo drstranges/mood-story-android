@@ -35,7 +35,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.drprog.moodstory.R;
 import com.drprog.moodstory.core.LogHelper;
-import com.drprog.moodstory.core.binding.handler.ActionType;
 import com.drprog.moodstory.core.binding.handler.ActionClickListener;
 import com.drprog.moodstory.core.image.ImageProgressListener;
 import com.drprog.moodstory.core.image.transform.BlurTransformation;
@@ -157,7 +156,7 @@ public class Converters {
     @BindingAdapter(value = {"actionHandler", "actionType", "actionTypeLongClick", "model"}, requireAll = false)
     public static void onActionFired(final View view,
                                      final ActionClickListener listener,
-                                     final ActionType actionType, final ActionType actionTypeLongClick,
+                                     final String actionType, final String actionTypeLongClick,
                                      final Model model) {
         if (listener != null) {
             view.setOnClickListener(new View.OnClickListener() {

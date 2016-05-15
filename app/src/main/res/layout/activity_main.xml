@@ -1,17 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".view.MainActivity">
+<layout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
-</RelativeLayout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.drprog.moodstory.viewmodel.MainActivityViewModel"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".view.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#c5bcc5ff"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="3"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="4"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#b3ffbcbc"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="-1"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="-2"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="-3"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="-4"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="-5"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/spacing_normal"
+            />
+    </LinearLayout>
+</layout>

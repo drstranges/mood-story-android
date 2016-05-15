@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Used for deep-linking
  * Created by roman.donchenko on 12.02.2016.
  */
 public class NavUriHelper {

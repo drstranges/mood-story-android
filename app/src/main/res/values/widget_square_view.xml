@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SquareView">
+        <attr name="sidePriority" format="enum">
+            <enum name="min" value="0"/>
+            <enum name="width" value="1"/>
+            <enum name="height" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

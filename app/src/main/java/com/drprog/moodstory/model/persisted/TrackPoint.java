@@ -2,7 +2,9 @@ package com.drprog.moodstory.model.persisted;
 
 import android.support.annotation.IntRange;
 
-public class TrackPoint {
+import io.realm.RealmObject;
+
+public class TrackPoint extends RealmObject {
 
     public static final int MIN_VALUE = -5;
     public static final int MAX_VALUE = 5;

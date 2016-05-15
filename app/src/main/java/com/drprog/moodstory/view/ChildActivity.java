@@ -81,16 +81,6 @@ public class ChildActivity extends AppCompatActivity implements OnResultListener
         isOnHomeProcessEnabled = enabled;
     }
 
-//    @Override
-//    public void setToolbarColor(Integer _color) {
-//        if (_color != null) {
-//            final ColorDrawable colorDrawable = new ColorDrawable(_color);
-//            getWindow().setBackgroundDrawable(colorDrawable);
-//        } else {
-//            getWindow().setBackgroundDrawableResource(R.color.colorPrimaryDark);
-//        }
-//    }
-
     @Override
     public void sendResult (int resultCode, Intent data) {
         setResult(resultCode, data);

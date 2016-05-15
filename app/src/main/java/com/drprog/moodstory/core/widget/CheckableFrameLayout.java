@@ -12,7 +12,8 @@ import android.view.ViewDebug;
 import android.widget.Checkable;
 import android.widget.FrameLayout;
 
-import com.riversoft.eventssion.view.widget.util.CheckedChangeHelper;
+import com.drprog.moodstory.core.widget.util.CheckedChangeHelper;
+
 
 /**
  * Created by roman.donchenko on 18.02.2016.

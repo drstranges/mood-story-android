@@ -12,13 +12,14 @@ import android.view.ViewDebug;
 import android.widget.Checkable;
 import android.widget.LinearLayout;
 
-import com.riversoft.eventssion.view.widget.util.CheckedChangeHelper;
+import com.drprog.moodstory.core.widget.util.CheckedChangeHelper;
+
 
 /**
  * Created by roman.donchenko on 18.02.2016.
  */
 @BindingMethods({
-        @BindingMethod(type = com.riversoft.eventssion.view.widget.CheckableLinearLayout.class,
+        @BindingMethod(type = CheckableLinearLayout.class,
                 attribute = "android:checked",
                 method = "setCheckedSoft"),
 })
