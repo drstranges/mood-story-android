@@ -2,7 +2,10 @@ package com.drprog.moodstory.model.persisted;
 
 import android.support.annotation.IntRange;
 
+import com.drprog.moodstory.core.time.DateTimeUtils;
+
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 public class TrackPoint extends RealmObject {
 
@@ -11,14 +14,22 @@ public class TrackPoint extends RealmObject {
 
     private Long id;
     private int value;
+    @PrimaryKey
+    private long timestamp;
     private String country;
     private String region;
     private Double lat;
     private Double lon;
-    private String timestamp;
-    private String modified;
+    private long lastModified;
 
     public TrackPoint() {
+    }
+
+    public TrackPoint(int value) {
+
+        this.value = value;
+        this.timestamp = DateTimeUtils.toUTC(System.currentTimeMillis());
+        this.lastModified = this.timestamp;
     }
 
     public Long getId() {
@@ -35,6 +46,14 @@ public class TrackPoint extends RealmObject {
 
     public void setValue(@IntRange(from = MIN_VALUE, to = MAX_VALUE) int value) {
         this.value = value;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 
     public String getCountry() {
@@ -69,19 +88,11 @@ public class TrackPoint extends RealmObject {
         this.lon = lon;
     }
 
-    public String getTimestamp() {
-        return timestamp;
+    public long getLastModified() {
+        return lastModified;
     }
 
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public String getModified() {
-        return modified;
-    }
-
-    public void setModified(String modified) {
-        this.modified = modified;
+    public void setLastModified(long lastModified) {
+        this.lastModified = lastModified;
     }
 }

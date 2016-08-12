@@ -35,7 +35,6 @@ buildscript {
         jcenter()
         mavenCentral()
         maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
-        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1' //log method by annotation @DebugLog
@@ -47,7 +46,6 @@ buildscript {
 repositories {
     mavenCentral()
     maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
-    maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -67,9 +65,9 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 
     compile 'io.reactivex:rxandroid:1.2.0'
-    compile 'io.reactivex:rxjava:2.0.0-DP0-SNAPSHOT'
+    compile 'io.reactivex:rxjava:1.1.5'
 
-    compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
 }
 
 

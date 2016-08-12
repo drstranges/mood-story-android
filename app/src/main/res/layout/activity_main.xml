@@ -2,13 +2,13 @@
 <layout>
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.drprog.moodstory.viewmodel.MainActivityViewModel"/>
+            type="com.drprog.moodstory.viewmodel.MainActivityViewModel" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,9 +31,10 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(5)}"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_circle"
-                android:text="1"
+                android:text="5"
                 android:textColor="@android:color/white"
                 android:textSize="28dp" />
 
@@ -43,30 +44,7 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@drawable/bg_circle"
-                android:text="2"
-                android:textColor="@android:color/white"
-                android:textSize="28dp" />
-
-            <com.drprog.moodstory.core.widget.TextImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@drawable/bg_circle"
-                android:text="3"
-                android:textColor="@android:color/white"
-                android:textSize="28dp" />
-
-            <com.drprog.moodstory.core.widget.TextImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(4)}"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_circle"
                 android:text="4"
@@ -79,9 +57,36 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(3)}"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_circle"
-                android:text="5"
+                android:text="3"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(2)}"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <com.drprog.moodstory.core.widget.TextImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(1)}"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_circle"
+                android:text="1"
                 android:textColor="@android:color/white"
                 android:textSize="28dp" />
         </LinearLayout>
@@ -100,6 +105,7 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(-1)}"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_circle"
                 android:text="-1"
@@ -112,6 +118,7 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(-2)}"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_circle"
                 android:text="-2"
@@ -124,6 +131,7 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(-3)}"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_circle"
                 android:text="-3"
@@ -136,6 +144,7 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(-4)}"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_circle"
                 android:text="-4"
@@ -148,6 +157,7 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="@{v -> viewModel.onValueChecked(-5)}"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_circle"
                 android:text="-5"
@@ -155,11 +165,10 @@
                 android:textSize="28dp" />
         </LinearLayout>
 
-        <com.github.mikephil.charting.charts.CombinedChart
+        <lecho.lib.hellocharts.view.ColumnChartView
             android:id="@+id/chart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/spacing_normal"
-            />
+            android:layout_marginTop="@dimen/spacing_normal" />
     </LinearLayout>
 </layout>

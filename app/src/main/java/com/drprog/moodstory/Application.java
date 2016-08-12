@@ -30,7 +30,9 @@ public class Application extends android.app.Application {
     }
 
     private void init() {
-        RealmConfiguration config = new RealmConfiguration.Builder(this).build();
+        RealmConfiguration config = new RealmConfiguration.Builder(this)
+                .deleteRealmIfMigrationNeeded()
+                .build();
         //Realm.deleteRealm(config);
         Realm.setDefaultConfiguration(config);
 
